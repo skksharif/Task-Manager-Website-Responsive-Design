@@ -1,0 +1,295 @@
+/* General Reset */
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+/* Body Styles */
+body {
+  background: linear-gradient(160deg, #d4a2a2, #7c9ea0);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 10px;
+  backdrop-filter: blur(10px);
+  background-color: #ffffff4a;
+  border-bottom: 0.1px solid rgba(255, 255, 255, 0.295);
+
+}
+
+.header__title {
+  font-size: 2.8rem;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.task-manager {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.task-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.task-form__title {
+  padding: 10px;
+  text-align: center;
+}
+.task-form__fields {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  padding: 10px;
+}
+.task-form__input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+.task-form__input:focus {
+  border-color: #fdfff3;
+}
+.take-form-selections{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.task-form__select{
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  font-size:1rem;
+  width: 30%;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+.task-form__button{
+  padding: 10px 20px;
+  background: #00bc9ce2;
+  color: #ffffff;
+  backdrop-filter: blur(10px);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.task-list__controls{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  padding-top: 18px;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.task-list__search{
+  height: 40px;
+  display: flex;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+.task-list__search-input{
+  width: 90%;
+  height: 40px;
+  padding: 10px;
+
+  background-color: transparent;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+}
+.task-list__search-button{
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  padding: 10px 10px;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.task-list__label{
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-transform: capitalize; 
+  cursor: pointer;
+}
+.task-list__select{
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  width: 100%;
+  outline: none;
+}
+.task-table {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  padding-top: 18px;
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  overflow-y: scroll;
+  width: 70vw;
+  height: 80vh;
+}
+.task-table::-webkit-scrollbar{
+  width: 8px;
+  background-color: rgba(195, 195, 195, 0.91);
+  border-radius: 10px;
+}
+.task-table::-webkit-scrollbar-thumb{
+  background-color: #666;
+  border-radius: 10px;
+}
+
+.task-table__table {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px 5px;
+  color: #ffffff;
+
+  border-spacing: 0 10px;
+}
+
+.task-table__table thead{
+  backdrop-filter: blur(5px);
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.task-table__table th, 
+.task-table__table td {
+  padding: 15px;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.task-table__table tbody tr {
+  height: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+  margin: 5px 0;
+  transition: transform 0.2s ease-in-out, background 0.3s ease;
+}
+
+.task-table__table tbody td {
+  text-align: center;
+}
+.delete-button{
+  padding: 5px 5px;
+  background: #ff3f3f;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: none;
+}
+.complete-button{
+  padding: 5px 5px;
+  background: #3f9f3f;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: none;
+}
+.complete-button i,.delete-button i{
+  font-size: 1rem;
+}
+
+.task-table__table tbody tr:hover .complete-button{
+  display:table-cell;
+}
+.task-table__table tbody tr:hover .delete-button{
+  display:table-cell;
+}
+.editable{
+  cursor: pointer;
+}
+.editable-input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: inherit;
+  text-align: center;
+  outline: none;
+}
+.completed-task {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+@media(max-width:786px){
+  body{
+    font-size: 14px;
+  }
+  .header__title {
+    font-size: 1.8rem;
+    font-style: oblique;
+  }
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px;
+  }
+  .task-table {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    padding-top: 18px;
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow: scroll;
+    width: 95vw;
+    height: auto;
+  }
+}
